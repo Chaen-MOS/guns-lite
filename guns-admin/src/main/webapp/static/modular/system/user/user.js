@@ -175,6 +175,8 @@ MgrUser.resetPwd = function () {
 
 MgrUser.resetSearch = function () {
     $("#name").val("");
+    $("#email").val("");
+    $("#phone").val("");
     $("#beginTime").val("");
     $("#endTime").val("");
     MgrUser.search();
@@ -185,6 +187,8 @@ MgrUser.search = function () {
 
     queryData['deptid'] = MgrUser.deptid;
     queryData['name'] = $("#name").val();
+    queryData['email'] = $("#email").val();
+    queryData['phone'] = $("#phone").val();
     queryData['beginTime'] = $("#beginTime").val();
     queryData['endTime'] = $("#endTime").val();
 
