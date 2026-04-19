@@ -11,4 +11,23 @@
 		</div>
 	</div>
 </div>
+<script>
+    function syncTheme() {
+        var isDark = localStorage.getItem('isDarkMode') === 'true';
+        
+        if (isDark) {
+            document.body.classList.add('dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
+        }
+    }
+
+    syncTheme();
+
+    window.addEventListener('storage', function(e) {
+        if (e.key === 'isDarkMode') {
+            syncTheme();
+        }
+    });
+</script>
 @}

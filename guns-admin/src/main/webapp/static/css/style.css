@@ -7151,7 +7151,8 @@ body.rtls.top-navigation .footer.fixed {
 .default-skin,
 .blue-skin,
 .ultra-skin,
-.yellow-skin {
+.yellow-skin,
+.dark-skin {
     text-align: center;
 }
 
@@ -7180,6 +7181,15 @@ body.rtls.top-navigation .footer.fixed {
 
 .yellow-skin:hover {
     background: #ce8735;
+}
+
+.dark-skin {
+    font-weight: 600;
+    background: #000000;
+}
+
+.dark-skin:hover {
+    background: #000000;
 }
 
 .content-tabs {
@@ -7894,4 +7904,76 @@ body.skin-3 {
 .tab-menu-selected {
     background-color: #293846 !important;
     color: white !important;
+}
+
+ body.dark-mode {
+     background-color: #1a1a1a !important;
+     color: #d1d1d1 !important;
+ }
+
+body.dark-mode #wrapper,
+body.dark-mode #page-wrapper,
+body.dark-mode .gray-bg,
+body.dark-mode .wrapper-content {
+    background-color: #1a1a1a !important;
+    background: #1a1a1a !important;
+}
+
+body.dark-mode .navbar-static-side,
+body.dark-mode .navbar-static-top,
+body.dark-mode .sidebar,
+body.dark-mode #right-sidebar {
+    background-color: #262626 !important;
+    border-color: #333 !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .ibox,
+body.dark-mode .ibox-title,
+body.dark-mode .ibox-content,
+body.dark-mode .white-bg {
+    background-color: #262626 !important;
+    border-color: #333 !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .sidebar-container ul.nav-tabs li.active a {
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .sidebar-container .sidebar-title,
+body.dark-mode .sidebar-container .setings-item,
+body.dark-mode .skin-setttings .title {
+    background-color: #262626 !important;
+    color: #ffffff !important;
+    border-bottom: 1px solid #333 !important;
+}
+
+body.dark-mode .sidebar-container .sidebar-title small {
+    color: #aaaaaa !important;
+}
+
+body.dark-mode table.table,
+body.dark-mode table.table > tbody > tr > td {
+    background-color: #262626 !important;
+    color: #ffffff !important;
+    border-color: #333 !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode a {
+    color: #d1d1d1 !important;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background-color: #333 !important;
+    color: #fff !important;
+    border: 1px solid #444 !important;
 }
