@@ -161,11 +161,9 @@ public class UserMgrController extends BaseController {
     @RequestMapping("/list")
     @Permission
     @ResponseBody
-    public Object list(@RequestParam(required = false) String name, @RequestParam(required = false) String email, @RequestParam(required = false) String phone, @RequestParam(required = false) String beginTime, @RequestParam(required = false) String endTime, @RequestParam(required = false) Integer deptid) {
+    public Object list(@RequestParam(required = false) String name, @RequestParam(required = false) String beginTime, @RequestParam(required = false) String endTime, @RequestParam(required = false) Integer deptid) {
         Map<String,Object> params = new HashMap<>();
         params.put("name",name);
-        params.put("email",email);
-        params.put("phone",phone);
         params.put("beginTime",beginTime);
         params.put("endTime",endTime);
         if (ShiroKit.isAdmin()) {
