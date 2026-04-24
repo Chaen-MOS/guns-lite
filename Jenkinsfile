@@ -1,10 +1,8 @@
 pipeline {
     agent any
-
     environment {
         WAR_FILE = 'guns-admin\\target\\guns-lite.war'
     }
-
     stages {
         stage('Checkout') {
             steps {
@@ -12,14 +10,12 @@ pipeline {
                 checkout scm
             }
         }
-
         stage('Build') {
             steps {
                 echo 'Building project with Maven...'
                 bat 'mvn clean package -DskipTests'
             }
         }
-
         stage('Test') {
             steps {
                 echo 'Running unit tests...'
@@ -31,7 +27,6 @@ pipeline {
                 }
             }
         }
-
         stage('Code Coverage') {
             steps {
                 echo 'Generating JaCoCo coverage report...'
@@ -43,7 +38,6 @@ pipeline {
                 }
             }
         }
-
         stage('Archive Artifact') {
             steps {
                 echo 'Archiving WAR file...'
@@ -51,7 +45,6 @@ pipeline {
             }
         }
     }
-
     post {
         success {
             echo 'CI pipeline completed successfully.'
