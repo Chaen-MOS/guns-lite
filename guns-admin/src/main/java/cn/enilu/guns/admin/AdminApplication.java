@@ -13,7 +13,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
 
 /**
  * SpringBoot方式启动类
@@ -27,7 +28,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EntityScan(basePackages="cn.enilu.guns.bean.entity")
 @EnableJpaRepositories(basePackages= "cn.enilu.guns.dao", repositoryFactoryBeanClass = BaseRepositoryFactoryBean.class)
 @EnableJpaAuditing
-public class AdminApplication extends WebMvcConfigurerAdapter {
+public class AdminApplication implements WebMvcConfigurer {
 
     protected final static Logger logger = LoggerFactory.getLogger(AdminApplication.class);
 
